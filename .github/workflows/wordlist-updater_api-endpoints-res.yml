@@ -18,7 +18,7 @@ jobs:
   update_api-endpoints-res:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
       - name: Generate api-endpoints-res.txt
         run: cd Discovery/Web-Content/api/ && cat api-seen-in-wild.txt actions.txt objects.txt actions-uppercase.txt actions-lowercase.txt objects-uppercase.txt objects-lowercase.txt | awk '! seen[$0]++' > api-endpoints-res.txt
       - name: Switching from HTTPS to SSH
